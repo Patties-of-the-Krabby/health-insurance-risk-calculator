@@ -1,5 +1,5 @@
 # Health Insurance Risk Calculator
-This is the base website for our organization's portfolio.
+This will calculate specific information to determine a client's risk to their insurance provider.
 
 ## Author(s)
 Josh Brown, Kevin Danowski, Olivia Adamic, Logan Prasczewicz, Emilio Vilchis, Justin Cordero

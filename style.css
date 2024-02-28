@@ -1,0 +1,97 @@
+@font-face {
+    font-family: 'KrabbyPatty-PKZAB';
+    src: url('KrabbyPatty-PKZAB.ttf') format('truetype');
+}
+
+body {
+    background: linear-gradient(180deg, #5fead7, #208bf5);
+    font-family: 'KrabbyPatty-PKZAB';
+}
+
+.header {
+    margin: 50px;
+    margin-bottom: 100px;
+}
+
+.logo {
+    width: 10%;
+    height: auto;
+    float: left;
+}
+
+#hospital-logo {
+    width: 100px;
+    height: 100px;
+}
+
+.title{
+    width: 90%;
+    height: auto;
+    float: right;
+    text-align: left;
+    font-size: Large;
+}
+
+.summary {
+    margin: 50px;
+}
+
+.blood-pressure-container {
+    margin: 50px;
+    margin-bottom: 150px;
+    padding: 40px;
+}
+
+.blood-img {
+    width: 50%;
+    height: auto;
+    float: right;
+}
+
+#blood-pressure-scale-img {
+    width: 60%;
+    height: auto;
+}
+
+.blood-question {
+    float: left;
+    text-align: left;
+}
+
+.bmi-container {
+    margin: 50px;
+    margin-bottom: 100px;
+    padding: 40px;
+}
+
+.bmi-question {
+    width: 50%;
+    height: auto;
+    float: left;
+    text-align: left;
+}
+
+.bmi-img {
+    width: 50%;
+    height: auto;
+    float: right;
+}
+
+#bmi-scale-img {
+    width: 60%;
+    height: auto;
+}
+
+.age-container {
+    margin: 50px;
+    padding: 40px;
+}
+
+.fam-hist-container {
+    margin: 50px;
+    padding: 40px;
+}
+
+.footer {
+    font-size: xx-small;
+}

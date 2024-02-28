@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Insurance Risk Calculator</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    
+    
+    <body>
+        <div class="header">
+            <div class="logo">
+                <img src="Hospital_logo.jpg" alt="Hospital Logo" id="hospital-logo">
+            </div>
+            <div class="title">
+                <h1>Bikini Bottom Health Insurance: Risk Calculator</h1>
+            </div>
+        </div>
+
+        <div class="summary">
+            <h2>How to use this website</h2>
+        </div>
+
+        <div class="blood-pressure-container">
+            <h2>Blood Pressure</h2>
+            <div class="blood-img">
+                <img src="HealthRiskCalculatorBloodPressure.png" alt="Blood Pressure" id="blood-pressure-scale-img">
+            </div>
+            <div class="blood-question">
+                <label>What blood pressure category does the individual fall in?</label><br>
+                <select id="blood">
+                    <option value="0">Normal</option>
+                    <option value="15">Elevated</option>
+                    <option value="30">Stage 1</option>
+                    <option value="75">Stage 2</option>
+                    <option value="100">Crisis</option>
+                </select><br>
+            </div>
+        </div>
+
+        <div class="bmi-container">
+            <h2>Body Mass Index (BMI)</h2>
+            <div class="bmi-question">
+                <label>What is the individual's height (inches)?</label><br>
+                <input type="text" id="height" name="height"><br><br>
+    
+                <label>What is the individual's weight (pounds)?</label><br>
+                <input type="text" id="weight" name="weight"><br>
+            </div>
+
+            <div class="bmi-img">
+                <img src="HealthRiskCalculatorBodyMassIndex.png" alt="Body Mass Index" id="bmi-scale-img">
+            </div>
+        </div>
+
+        <div class="age-container">
+            <h2>Age</h2>
+            <label>What is the individual's age?</label><br>
+            <select id="age-question">
+                <option value="0">Younger than 30</option>
+                <option value="10">30-45</option>
+                <option value="20">46-60</option>
+                <option value="30">60+</option>
+            </select><br>
+        </div>
+
+        <div class="fam-hist-container">
+            <h2>Family History</h2>
+            <label>Does the individual's family have a history of diabetes, cancer, or Alzheimer's?</label><br>
+            <select id="fam-hist-question">
+                <option value="0">None</option>
+                <option value="10">1 of these</option>
+                <option value="20">2 of these</option>
+                <option value="30">All 3</option>
+        </div>
+        
+        <div class="footer">
+            <p>Please note: Bikini Bottom Health Insurance will not cover individuals under the following conditions:</p>
+            <p>If you share similar qualities with Bubble Bass, if you sustained an injury at the Salty Spitoon, SUDS...</p>
+            <p></p>
+        </div>
+    </body>
+    
+</html>

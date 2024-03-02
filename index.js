@@ -1,10 +1,9 @@
-let value = 10;
+// let value = 10;
 fetch("https://health-insurance-risk-calculator-server.azurewebsites.net/age", {
   method: "POST",
   body: JSON.stringify({
-    age: value,
-    title: "Fix my bugs",
-    completed: false
+    age: 10,
+
   }),
   headers: {
     "Content-type": "application/json; charset=UTF-8"

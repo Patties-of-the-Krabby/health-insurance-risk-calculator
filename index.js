@@ -1,7 +1,7 @@
-fetch("", {
+fetch("https://health-insurance-risk-calculator-server.azurewebsites.net", {
   method: "POST",
   body: JSON.stringify({
-    userId: 1,
+    age: age-question,
     title: "Fix my bugs",
     completed: false
   }),

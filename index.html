@@ -5,6 +5,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="style.css">
+        <script src="index.js"></script>
     </head>
     
     
@@ -36,6 +37,7 @@
                     <option value="75">Stage 2</option>
                     <option value="100">Crisis</option>
                 </select><br>
+
             </div>
         </div>
 
@@ -57,12 +59,13 @@
         <div class="age-container">
             <h2>Age</h2>
             <label>What is the individual's age?</label><br>
-            <select id="age-question">
+            <select onchange="age()" id="age-question">
                 <option value="0">Younger than 30</option>
                 <option value="10">30-45</option>
                 <option value="20">46-60</option>
                 <option value="30">60+</option>
             </select><br>
+            <input id="age-points" type="hidden" value="" size="5" disabled><br>
         </div>
 
         <div class="fam-hist-container">
@@ -73,6 +76,7 @@
                 <option value="10">1 of these</option>
                 <option value="20">2 of these</option>
                 <option value="30">All 3</option>
+            </select><br>
         </div>
         
         <div class="footer">

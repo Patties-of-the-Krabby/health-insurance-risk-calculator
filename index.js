@@ -21,7 +21,13 @@ async function bmi(){
   //change this to be the result of the bmi calculation 
   document.getElementById("bmi-result").value = responseTextBMI
   console.log(document.getElementById("bmi-result").value)
+}
 
 
-
+async function ping(){
+  const url = "https://health-insurance-risk-calculator-server.azurewebsites.net"
+  const fetchString = url + "/api/ping"
+  const response = await fetch(fetchString)
+  const responseText = await response.text()
+  console.log(responseText)
 }

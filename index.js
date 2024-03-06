@@ -13,7 +13,8 @@ async function age() {
 async function bmi(){
   const height = document.getElementById("height").value
   const weight = document.getElementById("weight").value
-  const url = "https://health-insurance-risk-calculator-server.azurewebsites.net"
+  // const url = "https://health-insurance-risk-calculator-server.azurewebsites.net"
+  const url = "http://localhost:3000"
   const fetchString = url + "/bmi?height=" + height + "&weight=" + weight
   const response = await fetch(fetchString)
   const responseTextBMI = await response.text()

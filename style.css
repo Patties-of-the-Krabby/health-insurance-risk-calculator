@@ -82,6 +82,10 @@ body {
     height: auto;
 }
 
+.invalidText {
+    color: red;
+}
+
 .age-container {
     margin: 50px;
     padding: 40px;

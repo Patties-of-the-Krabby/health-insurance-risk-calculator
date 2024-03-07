@@ -11,15 +11,33 @@ async function age() {
 }
 
 async function bmi(){
-  const height = document.getElementById("height").value
-  const weight = document.getElementById("weight").value
-  // const url = "https://health-insurance-risk-calculator-server.azurewebsites.net"
-  const url = "http://localhost:3000"
+  // Getting the invalid IDs to show invalid text
+  const heightInvalid = document.getElementById("invalidHeight")
+  const weightInvalid = document.getElementById("invalidWeight")
+  // parse the inputs to integers for invalidity check
+  const height = parseInt(document.getElementById("height").value)
+  const weight = parseInt(document.getElementById("weight").value)
+  // if statements to display the "invalid text" if the inputs are invalid
+  if (!Number.isInteger(height)) {
+    heightInvalid.style.display = "block"
+  } else if (height < 24){
+    heightInvalid.style.display = "block"
+  } else {
+    heightInvalid.style.display = "none"
+  }
+  if (!Number.isInteger(weight)) {
+    weightInvalid.style.display = "block"
+  } else {
+    weightInvalid.style.display = "none"
+  }
+  // Need to add a way to stop the total output calculation when the
+  // submit button is pressed and the input is invalid
+
+  const url = "https://health-insurance-risk-calculator-server.azurewebsites.net"
   const fetchString = url + "/bmi?height=" + height + "&weight=" + weight
   const response = await fetch(fetchString)
   const responseTextBMI = await response.text()
 
-  //change this to be the result of the bmi calculation 
   document.getElementById("bmi-result").value = responseTextBMI
   console.log(document.getElementById("bmi-result").value)
 }

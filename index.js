@@ -13,6 +13,7 @@ async function age() {
 async function bmi(){
   // Getting the invalid IDs to show invalid text
   const heightInvalid = document.getElementById("invalidHeight")
+  const heightInvalid2 = document.getElementById("invalidHeight2")
   const weightInvalid = document.getElementById("invalidWeight")
   // parse the inputs to integers for invalidity check
   const height = parseInt(document.getElementById("height").value)
@@ -20,10 +21,13 @@ async function bmi(){
   // if statements to display the "invalid text" if the inputs are invalid
   if (!Number.isInteger(height)) {
     heightInvalid.style.display = "block"
-  } else if (height < 24){
-    heightInvalid.style.display = "block"
   } else {
     heightInvalid.style.display = "none"
+  }
+  if (height < 24){
+    heightInvalid2.style.display = "block"
+  } else {
+    heightInvalid2.style.display = "none"
   }
   if (!Number.isInteger(weight)) {
     weightInvalid.style.display = "block"

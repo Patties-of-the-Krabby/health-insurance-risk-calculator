@@ -6,9 +6,15 @@ async function age() {
   const fetchString = url+"/age?age="+age
   const response = await fetch(fetchString)
   const responseText = await response.text()
+<<<<<<< HEAD
   document.getElementById("age-result").value = responseText
   console.log(document.getElementById("age-result").value)
 } 
+=======
+  document.getElementById("age-points").value = responseText
+  console.log(document.getElementById("age-points").value)
+}
+>>>>>>> 3ff5125ab26a9f0bb8c5b891e8b0920152edc700
 
 async function bmi(){
   // Getting the invalid IDs to show invalid text
@@ -46,6 +52,7 @@ async function bmi(){
   console.log(document.getElementById("bmi-result").value)
 }
 
+<<<<<<< HEAD
 async function blood() {
   const blood = document.getElementById("blood-question").value
 
@@ -84,6 +91,8 @@ async function calculateRisk() {
   document.getElementById("risk-result").value = responseText
   console.log(document.getElementById("risk-result").value)
 } 
+=======
+>>>>>>> 3ff5125ab26a9f0bb8c5b891e8b0920152edc700
 
 async function ping(){
   const url = "https://health-insurance-risk-calculator-server.azurewebsites.net"

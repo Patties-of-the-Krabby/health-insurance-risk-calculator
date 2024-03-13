@@ -53,7 +53,7 @@ body {
     height: auto;
 }
 
-.blood-question {
+.blood {
     float: left;
     text-align: left;
 }
@@ -92,6 +92,13 @@ body {
     padding: 40px;
 }
 
+.risk-calculation-container {
+    margin: 50px;
+    padding: 40px;
+}   
+
 .footer {
     font-size: xx-small;
+    margin: 50px;
+    padding: 40px;
 }

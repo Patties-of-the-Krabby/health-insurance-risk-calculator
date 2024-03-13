@@ -9,7 +9,7 @@
     </head>
     
     
-    <body>
+    <body onload="ping()">
         <div class="header">
             <div class="logo">
                 <img src="Hospital_logo.jpg" alt="Hospital Logo" id="hospital-logo">
@@ -28,16 +28,16 @@
             <div class="blood-img">
                 <img src="HealthRiskCalculatorBloodPressure.png" alt="Blood Pressure" id="blood-pressure-scale-img">
             </div>
-            <div class="blood-question">
+            <div class="blood">
                 <label>What blood pressure category does the individual fall in?</label><br>
-                <select id="blood">
+                <select onchange="blood()" id="blood-question">
                     <option value="0">Normal</option>
                     <option value="15">Elevated</option>
                     <option value="30">Stage 1</option>
                     <option value="75">Stage 2</option>
                     <option value="100">Crisis</option>
                 </select><br>
-
+                <input id="blood-result" value="" size="5" readonly><br>
             </div>
         </div>
 
@@ -45,10 +45,18 @@
             <h2>Body Mass Index (BMI)</h2>
             <div class="bmi-question">
                 <label>What is the individual's height (inches)?</label><br>
+                <div class="invalidText" id="invalidHeight" style="display: none">Invalid Input</div>
+                <div class="invalidText" id="invalidHeight2" style="display: none">Height must be more than 2 feet</div>
                 <input type="text" id="height" name="height"><br><br>
-    
                 <label>What is the individual's weight (pounds)?</label><br>
+                <div class="invalidText" id="invalidWeight" style="display: none">Invalid Input</div>
                 <input type="text" id="weight" name="weight"><br>
+
+                <!--this is just a test button for now
+                eventually, we will add one button for the total for 
+                all of the apis-->
+                <button id="bmi-button" onclick = "bmi()">Submit BMI</button>
+                <input id="bmi-result" value="" size="5" readonly><br>
             </div>
 
             <div class="bmi-img">
@@ -65,24 +73,33 @@
                 <option value="20">46-60</option>
                 <option value="30">60+</option>
             </select><br>
-            <input id="age-points" type="hidden" value="" size="5" disabled><br>
+            <!--add in type="hidden" and disabled instead of readonly-->
+            <input id="age-result" value="" size="5" readonly><br>
         </div>
 
         <div class="fam-hist-container">
             <h2>Family History</h2>
             <label>Does the individual's family have a history of diabetes, cancer, or Alzheimer's?</label><br>
-            <select id="fam-hist-question">
+            <select onchange="history()" id="fam-hist-question">
                 <option value="0">None</option>
                 <option value="10">1 of these</option>
                 <option value="20">2 of these</option>
                 <option value="30">All 3</option>
             </select><br>
+            <input id="fam-hist-result" value="" size="5" readonly><br>
+        </div>
+
+        <div class="risk-calculation-container">
+            <h2>Your Calculated Risk</h2>
+            <p>Press the button below to submit your answers and calculate your risk.</p>
+            <button id="risk-button" onclick = "calculateRisk()">Calculate Risk</button>
+            <input id="risk-result" value="" size="15" readonly><br>
         </div>
         
         <div class="footer">
             <p>Please note: Bikini Bottom Health Insurance will not cover individuals under the following conditions:</p>
             <p>If you share similar qualities with Bubble Bass, if you sustained an injury at the Salty Spitoon, SUDS...</p>
-            <p></p>
+            <p>Random-spontaneous explosions, fishing hooks, food-borne illnesses from Nasty Patties, Pretty Patty induced mutations</p>
         </div>
     </body>
     

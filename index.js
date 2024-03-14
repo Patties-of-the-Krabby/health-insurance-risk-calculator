@@ -2,7 +2,7 @@ async function age() {
   const age = document.getElementById("age-question").value
 
   // Note the URL (fetch) string will look something like '/add-two-integers?x=2&y=1' when it is sent.
-  const url = "http://localhost:3000"
+  const url = "https://health-insurance-risk-calculator-server.azurewebsites.net"
   const fetchString = url+"/age?age="+age
   const response = await fetch(fetchString)
   const responseText = await response.text()
@@ -38,7 +38,7 @@ async function bmi(){
   // Need to add a way to stop the total output calculation when the
   // submit button is pressed and the input is invalid
 
-  const url = "http://localhost:3000"
+  const url = "https://health-insurance-risk-calculator-server.azurewebsites.net"
   const fetchString = url + "/bmi?height=" + height + "&weight=" + weight
   const response = await fetch(fetchString)
   const responseTextBMI = await response.text()
@@ -51,7 +51,7 @@ async function blood() {
   const blood = document.getElementById("blood-question").value
 
   // Note the URL (fetch) string will look something like '/add-two-integers?x=2&y=1' when it is sent.
-  const url = "http:localhost:3000"
+  const url = "https://health-insurance-risk-calculator-server.azurewebsites.net"
   const fetchString = url+"/blood?blood="+blood
   const response = await fetch(fetchString)
   const responseText = await response.text()
@@ -63,7 +63,7 @@ async function history() {
   const history = document.getElementById("fam-hist-question").value
 
   // Note the URL (fetch) string will look something like '/add-two-integers?x=2&y=1' when it is sent.
-  const url = "http://localhost:3000"
+  const url = "https://health-insurance-risk-calculator-server.azurewebsites.net"
   const fetchString = url+"/history?history="+history
   const response = await fetch(fetchString)
   const responseText = await response.text()
@@ -78,7 +78,7 @@ async function calculateRisk() {
   const history = document.getElementById("fam-hist-result").innerHTML
 
   // Note the URL (fetch) string will look something like '/add-two-integers?x=2&y=1' when it is sent.
-  const url = "http://localhost:3000"
+  const url = "https://health-insurance-risk-calculator-server.azurewebsites.net"
   const fetchString = url+"/calculateRisk?age="+age+"&bmi="+bmi+"&blood="+blood+"&history="+history
   const response = await fetch(fetchString)
   const responseText = await response.text()
@@ -94,4 +94,4 @@ async function ping(){
   console.log(responseText)
 }
 
-// https://health-insurance-risk-calculator-server.azurewebsites.net
+// 

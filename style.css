@@ -11,6 +11,7 @@ body {
 .header {
     margin: 50px;
     margin-bottom: 100px;
+    padding: 40px;
 }
 
 .logo {
@@ -34,6 +35,7 @@ body {
 
 .summary {
     margin: 50px;
+    padding: 40px;
 }
 
 .blood-pressure-container {
@@ -60,7 +62,7 @@ body {
 
 .bmi-container {
     margin: 50px;
-    margin-bottom: 100px;
+    margin-bottom: 150px;
     padding: 40px;
 }
 

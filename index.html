@@ -21,6 +21,12 @@
 
         <div class="summary">
             <h2>How to use this website</h2>
+            <p>
+                Input your answers into the survey below. The answer to each 
+                question is valued with a certain amount of points. These points
+                will be calculated at the end to determine how an insurance company
+                would evaluate you and your risk. 
+            </p>
         </div>
 
         <div class="blood-pressure-container">
@@ -31,13 +37,15 @@
             <div class="blood">
                 <label>What blood pressure category does the individual fall in?</label><br>
                 <select onchange="blood()" id="blood-question">
+                    <option>-Select an option-</option>
                     <option value="0">Normal</option>
                     <option value="15">Elevated</option>
                     <option value="30">Stage 1</option>
                     <option value="75">Stage 2</option>
                     <option value="100">Crisis</option>
                 </select><br>
-                <input id="blood-result" value="" size="5" readonly><br>
+                <!-- <input id="blood-result" value="" size="5" readonly><br> -->
+                <p id="blood-result"></p>
             </div>
         </div>
 
@@ -56,7 +64,8 @@
                 eventually, we will add one button for the total for 
                 all of the apis-->
                 <button id="bmi-button" onclick = "bmi()">Submit BMI</button>
-                <input id="bmi-result" value="" size="5" readonly><br>
+                <!-- <input id="bmi-result" value="" size="5" readonly><br> -->
+                <p id="bmi-result"></p>
             </div>
             
 
@@ -69,32 +78,37 @@
             <h2>Age</h2>
             <label>What is the individual's age?</label><br>
             <select onchange="age()" id="age-question">
+                <option>-Select an option-</option>
                 <option value="0">Younger than 30</option>
                 <option value="10">30-45</option>
                 <option value="20">46-60</option>
                 <option value="30">60+</option>
             </select><br>
             <!--add in type="hidden" and disabled instead of readonly-->
-            <input id="age-result" value="" size="5" readonly><br>
+            <!-- <input id="age-result" value="" size="5" readonly><br> -->
+            <p id="age-result"></p>
         </div>
 
         <div class="fam-hist-container">
             <h2>Family History</h2>
             <label>Does the individual's family have a history of diabetes, cancer, or Alzheimer's?</label><br>
             <select onchange="history()" id="fam-hist-question">
+                <option>-Select an option-</option>
                 <option value="0">None</option>
                 <option value="10">1 of these</option>
                 <option value="20">2 of these</option>
                 <option value="30">All 3</option>
             </select><br>
-            <input id="fam-hist-result" value="" size="5" readonly><br>
+            <!-- <input id="fam-hist-result" value="" size="5" readonly><br> -->
+            <p id="fam-hist-result"></p>
         </div>
 
         <div class="risk-calculation-container">
             <h2>Your Calculated Risk</h2>
             <p>Press the button below to submit your answers and calculate your risk.</p>
             <button id="risk-button" onclick = "calculateRisk()">Calculate Risk</button>
-            <input id="risk-result" value="" size="15" readonly><br>
+            <!-- <input id="risk-result" value="" size="15" readonly><br> -->
+            <p id="risk-result"></p>
         </div>
         
         <div class="footer">
